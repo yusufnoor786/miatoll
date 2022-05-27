@@ -13,7 +13,7 @@
 # limitations under the License.
 
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -26,6 +26,10 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+
+#Altho
+CUSTOM_BUILD_TYPE := OFFICIAL
+Altho_MAINTAINER := Bala_Surya
 
 # Set this flag in build script
 ifeq ($(CURRENT_BUILD_TYPE), gapps)
